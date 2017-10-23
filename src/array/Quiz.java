@@ -1,174 +1,54 @@
 package array;
 import java.util.Scanner;
-import javax.swing.JOptionPane;
-public class Quiz {
-
-	/**
-	 * @param args
-	 */
+public class Quiz2 {
+	private static String[] questions = {"What does abuela mean in English? \nA) mom \nB) brother \nC) Grandma", "What does cantar mean in English? \nA to sing \nB to drink \nC to run", 
+		"What does el centro comercial mean in English? \nA mall \nB pencil \nC tv show", "What does comer mean in English? \nA to draw \nB to write \nC to eat",
+		"What does hacer la tarea mean in English? \nA to exercise \nB to do homework \nC to shop","What does juegos de mesa mean in English? \nA board games \nB to play football \nC table", 
+		"What does 'leer' mean in English? \nA to fish \nB to read \nC to hunt",
+		"What does 'playa' mean in English? \nA boy \nB pool \nC beach", "What does 'trabajar' mean in English? \nA to be short \nB to work \nC to sleep",
+		"What does 'siempre' mean in English? \nA always \nB sometimes \nC never"};
+	private static String[] answers = {"C", "A", "A", "C", "B", "A", "B", "C", "B", "B"};
+	private static final double maxCorrect = answers.length;
+	private static double correctAnswers = 0.0;
+	private static Scanner in = new Scanner(System.in);
+	
+	
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		String user;
-		int choice;
-		Scanner input = new Scanner(System.in);
+		String user = "Yes";
 	
-		user = JOptionPane.showInputDialog(null,"What does 'abuela' mean in English? \n1 mom \n2 brother \n3 grandma");
-		choice = Integer.parseInt(user);
-		if(choice == 1){
-			JOptionPane.showMessageDialog(null, "The correct answer was 3");
+		while (user.equalsIgnoreCase("Yes")) {
+		endGame();
+		System.out.println("Would you like to play again?");
+		user = in.nextLine();
 		}
-		if(choice == 2) {
-			JOptionPane.showMessageDialog(null, "The correct answer was 3");
-		}
-		if(choice == 3) {
-			JOptionPane.showMessageDialog(null, "Correct!");
-		}
-		
-		
-		
-		user = JOptionPane.showInputDialog(null,"What does 'cantar' mean in English? \n1 to sing \n2 to drink \n3 to run");
-		choice = Integer.parseInt(user);
-		if(choice == 1){
-			JOptionPane.showMessageDialog(null, "Correct!");
-		}
-		if(choice == 2) {
-			JOptionPane.showMessageDialog(null, "The correct answer was 1");
-		}
-		if(choice == 3) {
-			JOptionPane.showMessageDialog(null, "The correct answer was 1");
-		}
-		
-		
-		
-		user = JOptionPane.showInputDialog(null,"What does 'el centro comercial' mean in English? \n1 mall \n2 pencil \n3 tv show");
-		choice = Integer.parseInt(user);
-		if(choice == 1){
-			JOptionPane.showMessageDialog(null, "Correct!");
-		}
-		if(choice == 2) {
-			JOptionPane.showMessageDialog(null, "The correct answer was 1");
-		}
-		if(choice == 3) {
-			JOptionPane.showMessageDialog(null, "The correct answer was 1");
-		}
-		
-		
-		
-		user = JOptionPane.showInputDialog(null,"What does 'comer' mean in English? \n1 to draw \n2 to write \n3 to eat");
-		choice = Integer.parseInt(user);
-		if(choice == 1){
-			JOptionPane.showMessageDialog(null, "The correct answer was 3");
-		}
-		if(choice == 2) {
-			JOptionPane.showMessageDialog(null, "The correct answer was 3");
-		}
-		if(choice == 3) {
-			JOptionPane.showMessageDialog(null, "Correct!");
-		}
-		
-		
-		
-		user = JOptionPane.showInputDialog(null,"What does 'cantar' mean in English? \n1 to sing \n2 to drink \n3 to run");
-		choice = Integer.parseInt(user);
-		if(choice == 1){
-			JOptionPane.showMessageDialog(null, "Correct!");
-		}
-		if(choice == 2) {
-			JOptionPane.showMessageDialog(null, "The correct answer was 1");
-		}
-		if(choice == 3) {
-			JOptionPane.showMessageDialog(null, "The correct answer was 1");
-		}
-		
-		
-		user = JOptionPane.showInputDialog(null,"What does 'hacer la tarea' mean in English? \n1 to exercise \n2 to do homework \n3 to shop" +
-				"");
-		choice = Integer.parseInt(user);
-		if(choice == 1){
-			JOptionPane.showMessageDialog(null, "The correct answer was 2");
-		}
-		if(choice == 2) {
-			JOptionPane.showMessageDialog(null, "Correct!");
-		}
-		if(choice == 3) {
-			JOptionPane.showMessageDialog(null, "The correct answer was 2");
-		}
-
-		
-		
-		user = JOptionPane.showInputDialog(null,"What does 'juegos de mesa' mean in English? \n1 board games \n2 to play football \n3 table");
-		choice = Integer.parseInt(user);
-		if(choice == 1){
-			JOptionPane.showMessageDialog(null, "Correct!");
-		}
-		if(choice == 2) {
-			JOptionPane.showMessageDialog(null, "The correct answer was 1");
-		}
-		if(choice == 3) {
-			JOptionPane.showMessageDialog(null, "The correct answer was 1");
-		}
-			
-		
-		user = JOptionPane.showInputDialog(null,"What does 'leer' mean in English? \n1 to fish \n2 to read \n3 to hunt");
-		choice = Integer.parseInt(user);
-		if(choice == 1){
-			JOptionPane.showMessageDialog(null, "The correct answer was 2");
-		}
-		if(choice == 2) {
-			JOptionPane.showMessageDialog(null, "Correct!");
-		}
-		if(choice == 3) {
-			JOptionPane.showMessageDialog(null, "The correct answer was 2");
-		}
-		
-		
-		user = JOptionPane.showInputDialog(null,"What does 'playa' mean in English? \n1 boy \n2 pool \n3 beach");
-		choice = Integer.parseInt(user);
-		if(choice == 1){
-			JOptionPane.showMessageDialog(null, "The correct answer was 3");
-		}
-		if(choice == 2) {
-			JOptionPane.showMessageDialog(null, "The correct answer was 3");
-		}
-		if(choice == 3) {
-			JOptionPane.showMessageDialog(null, "Correct!");
-		}
-		
-		
-		user = JOptionPane.showInputDialog(null,"What does 'trabajar' mean in English? \n1 to be short \n2 to work \n3 to sleep");
-		choice = Integer.parseInt(user);
-		if(choice == 1){
-			JOptionPane.showMessageDialog(null, "The correct answer was 2");
-		}
-		if(choice == 2) {
-			JOptionPane.showMessageDialog(null, "Correct!");
-		}
-		if(choice == 3) {
-			JOptionPane.showMessageDialog(null, "The correct answer was 2");
-		}
-		
-		
-		user = JOptionPane.showInputDialog(null,"What does 'siempre' mean in English? \n1 always \n2 sometimes \n3 never");
-		choice = Integer.parseInt(user);
-		if(choice == 1){
-			JOptionPane.showMessageDialog(null, "The correct answer was 2");
-		}
-		if(choice == 2) {
-			JOptionPane.showMessageDialog(null, "Correct!");
-		}
-		if(choice == 3) {
-			JOptionPane.showMessageDialog(null, "The correct answer was 2");
-		}
-		
-		JOptionPane.showMessageDialog(null, "Your score is " + score + ". Would you like to play again?");
-		if("Yes".equalsIgnoreCase()) {
-		
-		}
-		
-		
-		
-		
-		
+		in.close();
 	}
+	
+	
+	
+	private static void endGame() {
+		for(int i = 0; i < questions.length; i++) {
+			System.out.println(questions[i]);
+			System.out.print("Answer >> ");
+			String playerAnswer = in.nextLine();
+			
+			while (!playerAnswer.equalsIgnoreCase("A") &&
+					!playerAnswer.equalsIgnoreCase("B") &&
+					!playerAnswer.equalsIgnoreCase("C")) {
+				System.out.println("Please enter A, B, or C");
+				System.out.print("Answer >> ");
+				playerAnswer = in.nextLine();
+			}
+			
+			if(playerAnswer.equalsIgnoreCase(answers[i])) {
+				System.out.println("Correct!");
+				correctAnswers++;
+			} else {
+				System.out.println("Wrong!");
+			}
+			}
+		System.out.println("You scored " + ((correctAnswers/maxCorrect) * 100) + "%")
+ 	}
 
 }
