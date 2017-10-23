@@ -1,6 +1,5 @@
-package array;
 import java.util.Scanner;
-public class FINAL Quiz {
+public class FINALQuiz {
 	private static String[] questions = {"What does abuela mean in English? \nA) mom \nB) brother \nC) Grandma", "What does cantar mean in English? \nA to sing \nB to drink \nC to run", 
 		"What does el centro comercial mean in English? \nA mall \nB pencil \nC tv show", "What does comer mean in English? \nA to draw \nB to write \nC to eat",
 		"What does hacer la tarea mean in English? \nA to exercise \nB to do homework \nC to shop","What does juegos de mesa mean in English? \nA board games \nB to play football \nC table", 
@@ -47,8 +46,7 @@ public class FINAL Quiz {
 			} else {
 				System.out.println("Wrong!");
 			}
-			}
+		}
 		System.out.println("You scored " + ((correctAnswers/maxCorrect) * 100) + "%");
  	}
-
 }
